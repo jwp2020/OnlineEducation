@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/guli_parent/guli_parent.iml" filepath="$PROJECT_DIR$/guli_parent/guli_parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/onlineEducation.iml" filepath="$PROJECT_DIR$/.idea/onlineEducation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guli_parent/service/service.iml" filepath="$PROJECT_DIR$/guli_parent/service/service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guli_parent/service/service_edu/service_edu.iml" filepath="$PROJECT_DIR$/guli_parent/service/service_edu/service_edu.iml" />
+    </modules>
+  </component>
+</project>
