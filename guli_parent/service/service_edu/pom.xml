@@ -17,7 +17,6 @@
             <version>3.3.0</version>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -44,11 +43,10 @@
         </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-annotation</artifactId>
+            <artifactId>mybatis-plus-extension</artifactId>
             <version>3.0.5</version>
             <scope>compile</scope>
         </dependency>
-
     </dependencies>
 
 
