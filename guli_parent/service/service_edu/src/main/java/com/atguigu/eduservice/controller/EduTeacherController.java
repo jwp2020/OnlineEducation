@@ -5,6 +5,7 @@ import com.atguigu.commonutils.R;
 import com.atguigu.eduservice.entity.EduTeacher;
 import com.atguigu.eduservice.entity.vo.TeacherQuery;
 import com.atguigu.eduservice.service.EduTeacherService;
+import com.atguigu.servicebase.exceptionhandler.GuliException;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.Api;
@@ -71,6 +72,12 @@ public class EduTeacherController {
         teacherService.page(pageTeacher, null);
         long total = pageTeacher.getTotal();//总记录数
         List<EduTeacher> records = pageTeacher.getRecords();//数据list集合
+
+        try {
+            int i = 10/0;
+        }catch (Exception e){
+            throw new GuliException(20001, "执行了自定义异常处理");
+        }
 
         //方法1
         Map map = new HashMap();
