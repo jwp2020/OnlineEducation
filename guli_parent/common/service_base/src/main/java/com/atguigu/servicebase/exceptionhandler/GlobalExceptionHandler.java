@@ -2,10 +2,12 @@ package com.atguigu.servicebase.exceptionhandler;
 
 
 import com.atguigu.commonutils.R;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+@Slf4j
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
@@ -26,6 +28,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(GuliException.class)//自定义异常
     @ResponseBody//返回数据
     public R error(GuliException e){
+        log.error(e.getMessage());
         e.printStackTrace();
         return R.error().code(e.getCode()).message(e.getMsg());
     }
