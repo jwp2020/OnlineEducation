@@ -30,6 +30,7 @@ import java.util.Map;
 @Api(description = "讲师管理")
 @RestController
 @RequestMapping("/eduservice/teacher")
+@CrossOrigin
 public class EduTeacherController {
     @Autowired
     private EduTeacherService teacherService;
@@ -95,6 +96,7 @@ public class EduTeacherController {
      * @param limit
      * @param teacherQuery
      * @return
+     * RequestBody表示要用Json传数据
      */
     @ApiOperation(value = "带条件的分页查询")
     @PostMapping("pageTeacherCondition/{current}/{limit}")
