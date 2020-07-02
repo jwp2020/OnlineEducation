@@ -74,11 +74,11 @@ public class EduTeacherController {
         long total = pageTeacher.getTotal();//总记录数
         List<EduTeacher> records = pageTeacher.getRecords();//数据list集合
 
-        try {
-            int i = 10/0;
-        }catch (Exception e){
-            throw new GuliException(20001, "执行了自定义异常处理");
-        }
+//        try {
+//            int i = 10/0;
+//        }catch (Exception e){
+//            throw new GuliException(20001, "执行了自定义异常处理");
+//        }
 
         //方法1
         Map map = new HashMap();
@@ -125,6 +125,8 @@ public class EduTeacherController {
         if(!StringUtils.isEmpty(end)){
             wrapper.le("gmt_create", end);
         }
+        //根据添加时间降序排序
+        wrapper.orderByDesc("gmt_create");
         teacherService.page(pageTeacher, wrapper);
         long total = pageTeacher.getTotal();
         List<EduTeacher> records = pageTeacher.getRecords();
